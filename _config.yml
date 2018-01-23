@@ -1,4 +1,6 @@
-baseurl: /
+theme: jekyll-text-theme
+url: https://github.com/Perfect-Jimmy #the base hostname & protocol for your site e.g. https://www.someone.com
+baseurl: /Perfect-Jimmy.github.io
 title: ′﹏紫ゝ's blog
 description: > #this means to ignore newlines until "nav_lists:"
   Someone's Blog
@@ -68,7 +70,7 @@ paginate_path: /blog/page:num
 
 ## Post excerpts ##
 excerpt_separator: <!--more-->
-excerpt_type: text # text | html
+excerpt_type: html # text | html
 
 ## Build ##
 markdown: kramdown
