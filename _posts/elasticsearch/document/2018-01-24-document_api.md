@@ -4,6 +4,9 @@ title: document api 使用
 key: 20180123
 tags: elasticsearch document
 ---
+
+### Document API
+
 > 创建文档 PUT
 ```
 curl -H "Content-Type:application/json" -X PUT 'localhost:9200/customer/user/1?pretty' -d ' 
@@ -52,8 +55,8 @@ curl -H "Content-Type:application/json" -X POST 'localhost:9200/customer/user?pr
   "_primary_term" : 1
 }
 ```
-*注:不指定id的时候使用POST,elasticsearch会自动生成一个ID*
-####说明:_shards分片
+*注:不指定id的时候使用POST,elasticsearch会自动生成一个ID*  
+#### 说明:_shards分片
 
 > 查询文档
 ```
@@ -101,7 +104,7 @@ curl -X GET 'localhost:9200/customer/user/_search?pretty'
   }
 }
 ```
-####说明:
+#### 说明:
 * took:
 * timed_out:
 * _shards:
@@ -131,7 +134,7 @@ curl -H "Content-Type:application/json" -X PUT 'localhost:9200/customer/user/1?p
   "_primary_term" : 1
 }
 ```
-####缺点:必须带上全部的field.如果某一个field没有带上,则此field的值会更新为null.也可以新增一个field
+#### 缺点:必须带上全部的field.如果某一个field没有带上,则此field的值会更新为null.也可以新增一个field
 
 > 更新文档 POST _update doc
 ```
@@ -160,7 +163,7 @@ curl -H "Content-Type:application/json" -X POST 'localhost:9200/customer/user/1/
   "_primary_term" : 1
 }
 ```
-####说明:首先找到文档,删除旧的文档内容,然后执行更新再索引新的文档.也可以新增一个field
+#### 说明:首先找到文档,删除旧的文档内容,然后执行更新再索引新的文档.也可以新增一个field
 
 > 删除文档 
 ```
