@@ -1,7 +1,7 @@
 ---
 layout: post
 title: document api 使用
-key: 20180123
+key: 20180124
 tags: elasticsearch document
 ---
 
