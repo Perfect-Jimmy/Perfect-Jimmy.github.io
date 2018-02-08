@@ -148,7 +148,7 @@ public class Receiver {
 }
 ```
 此时,消息队列中的消息会在等消费者处理完成之后才移除
-![work queue](https://raw.githubusercontent.com/Perfect-Jimmy/Tutorial/master/tutorial_rabbitmq/image/workqueue.png)
+![work queue]({{'/images/rabbitmq/workqueue.png' | relative_url }}){: .center-image }
 
 ### 消息持久化
 
